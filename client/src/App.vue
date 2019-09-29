@@ -1,32 +1,25 @@
 <template>
   <div id="app">
-    <Todos />
-    <footer class="info">
-      <p>Based on a project written by <a href="http://evanyou.me">Evan You</a></p>
-      <p>Original Vue TodoApp project is <a href="https://vuejs.org/v2/examples/todomvc.html">here</a></p>
-      <p>Modified for this tutorial by Andrew Hughes</p>
-    </footer>
+    <AppNavBar></AppNavBar>
+    <router-view></router-view>
+    <AppFooter></AppFooter>
   </div>
 </template>
 
-<script>
-  import Todos from './components/Todos'
-  // app Vue instance
-  const app = {
-    name: 'app',
-    components: {
-      Todos
-    },
-    // app initial state
-    data: () => {
-      return {
-      }
-    }
-  }
+<script lang="ts">
+import {Vue, Component} from 'vue-property-decorator';
+import AppFooter from '@/components/AppFooter.vue';
+import AppNavBar from '@/components/AppNavBar.vue';
 
-  export default app
+@Component({
+  components: {
+    AppFooter, AppNavBar,
+  },
+})
+export default class App extends Vue {
+
+}
 </script>
-
 <style>
-  [v-cloak] { display: none; }
+
 </style>
