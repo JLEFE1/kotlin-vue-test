@@ -17,6 +17,7 @@
         // console.log("Books view is instiantiated");
         get books() {
             console.log("books getter is used");
+            console.log(books.getBooks());
             return api.allBooks();
         }
     }

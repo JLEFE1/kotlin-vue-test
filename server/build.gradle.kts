@@ -57,9 +57,9 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-//    compile("org.springframework.boot:spring-boot-starter-webflux")
-//    testCompile("org.springframework.boot:spring-boot-starter-test")
-//    testCompile("io.projectreactor:reactor-test")
+    compile("org.springframework.boot:spring-boot-starter-webflux")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("io.projectreactor:reactor-test")
 
 }
 
